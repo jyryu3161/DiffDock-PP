@@ -26,7 +26,10 @@ Now, you can install the required packages
 conda install pytorch=1.13.0 pytorch-cuda=11.6 -c pytorch -c nvidia
 
 # install compatible pytorch geometric in this order WITH versions
-pip install --no-cache-dir  torch-scatter==2.0.9 torch-sparse==0.6.15 torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
+conda install pytorch-sparse -c pyg 
+conda install pytorch-cluster -c pyg 
+conda install pytorch-spline-conv -c pyg 
+pip install torch_geometric==2.0.4
 
 pip install numpy dill tqdm pyyaml pandas biopandas scikit-learn biopython e3nn wandb tensorboard tensorboardX matplotlib
 ```
